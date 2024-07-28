@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <DockerComposeProjectPath>../docker-compose.dcproj</DockerComposeProjectPath>
+        <UserSecretsId>d0fe6a7b-f30e-4d30-bb1b-431b79e17c83</UserSecretsId>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(RunConfiguration)' == 'https' " />
+    <PropertyGroup Condition=" '$(RunConfiguration)' == 'http' " />
+    <ItemGroup>
+        <PackageReference Include="ConfigurationReader" Version="1.0.0" />
+        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.4" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+    </ItemGroup>
+
+</Project>
